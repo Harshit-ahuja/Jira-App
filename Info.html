@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            background-image: url("Assets/myGif.gif");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .about{
+            width: 40vw;
+            height: 90vh;
+            border: 15px solid #060844;
+            background-color: #eef6f6;
+            overflow-y: auto;
+            padding: 1.2rem;
+        }
+
+        .about-heading{
+            text-align: center;
+            color: #092a9c;
+            font-family: 'Roboto Slab', serif;
+            font-size: 2rem;
+        }
+
+        .about-main-list{
+            font-family: 'Work Sans', sans-serif;
+            color: black;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .about-sub-list{
+            color: #0c1934;
+            font-size: 0.9rem;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn{
+            width: 10rem;
+            height: 1.8rem;
+            border: 2px solid;
+            text-align: center;
+            background-color: #092a9c;
+            font-family: 'Roboto Slab', serif;
+            color: #eef6f6;
+        }
+
+        .btn:hover{
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 400px) {
+            .about{
+                width: 98vw;
+                height: 90vh;
+                padding: 0;
+                border: 8px solid #060844;
+            }
+
+            .about-heading{
+                font-size: 1.2rem;
+            }
+
+            .about-main-list{
+                font-size: 0.8rem;
+            }
+
+            .about-sub-list{
+                font-size: 0.6rem;
+            }
+
+            .btn{
+                width: 7rem;
+                height: 1.2rem;
+                font-size: 0.8rem;
+            }
+
+            .btn:hover{
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 780px) {
+            .about{
+                width: 80vw;
+                height: 80vh;
+                padding: 0.1rem;
+            }
+        }
+
+        @media (max-width: 1080px) {
+            .about{
+                width: 70vw;
+                height: 60vh;
+                padding: 0.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+        <div class="about">
+            <h2 class="about-heading">INSTRUCTIONS :-</h2>
+            <ul type="square" class="about-main-list">
+                <li>Add Tickets Using '+' button in the NavBar</li>
+                <li>The Modal that appears after clicking '+' gives you option to write your task and also choose the color according to the priority of the task</li>
+                
+                <ul type="circle" class="about-sub-list">
+                    <li>Choose 'Pink' for the task having low priority</li>
+                    <li>Choose 'Blue' for the task having Medium priority</li>
+                    <li>Choose 'Green' for the task having high priority</li>
+                    <li>Choose 'Red' for the task which is extremely Urgent</li>
+                </ul>
+    
+                <li>After entering the task in the modal. Press Enter to generate the ticket corresponding to that task</li>
+                <li>In order to give a line gap while entering the task in the modal, press 'Shift + Enter'</li>
+                <li>The tickets generated are editable</li>
+                    <ul type="circle" class="about-sub-list">
+                        <li>Priority color can be changed by simply clicking on it.</li>
+                        <li>In order to edit the task, unlock the ticket first by clicking on the 'lock' icon</li>
+                    </ul>
+                <li>In order to delete a particular ticket :-
+                    <ul type="circle" class="about-sub-list">
+                        <li>Click on the 'x' icon inside the NavBar</li>
+                        <li>After that, click on the ticket that you desire to delete</li>
+                        <li>After deleting the required ticket(s), again click on the 'delete icon'</li>
+                    </ul>
+                
+                <li>In order to delete all the tickets at once, then click on 'delete' icon inside the NavBar</li>
+                <li>In order to view only the tickets having a particular priority color, click on the corresponding color inside the NavBar</li>
+                <li>All the tasks are locally stored inside the browser</li>
+                <li>Tickets once deleted cannot be restored</li>
+                
+            </ul>
+            <div class="btn-container">
+                <div class="btn">Go To Main Page</div>
+            </div>
+        </div>
+
+    <script>
+        let redirectBtn = document.querySelector(".btn");
+        redirectBtn.addEventListener("click", function(e) {
+        window.location.replace("index.html");
+        })
+        </script>
+        
+    </body>
+</html>

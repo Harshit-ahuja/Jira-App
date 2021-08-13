@@ -1,1 +1,1 @@
-# Jira-App
+It is a To-Do list application. It uses Local Storage to retain data.
